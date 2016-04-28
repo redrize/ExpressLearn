@@ -7,7 +7,7 @@ app.disable('x-powered-by');
 var handlebars = require('express-handlebars').create({defaultLayout:'main'});
 
 app.engine('handlebars', handlebars.engine);
-app.set('view engine', handlebars);
+app.set('view engine', 'handlebars');
 
 //More imports here
 
@@ -23,7 +23,7 @@ app.get('/', function(req, res){
 
 
 app.listen(app.get('port'),  function () {
-	console.log("To terminate prec Ctrl+C");
+	console.log("To terminate prec Ctrl+C and port number is " + app.get('port'));
 });
 
 
